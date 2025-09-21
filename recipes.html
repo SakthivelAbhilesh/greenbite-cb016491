@@ -14,19 +14,10 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <!-- 
-    - favicon
-  -->
+  <!-- Favicon -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-  <!-- 
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- 
-    - google font link
-  -->
+  <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -36,101 +27,68 @@
 
 <body id="top">
 
-  <!-- ========================================
-       HEADER
-       ======================================== -->
-  <!-- 
-    - #HEADER
-  -->
-
+  <!-- ========== HEADER ========== -->
   <header class="header" data-header>
     <div class="container">
 
-      <!-- Logo -->
       <a href="#" class="logo">
         GreenBite<span class="span">.</span>
       </a>
 
-      <!-- Navbar -->
       <nav class="navbar" data-navbar>
-
-        <!-- Close button (mobile nav) -->
         <button class="nav-toggle-btn" aria-label="close menu" data-nav-toggler>
           <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </button>
 
-        <!-- Nav links -->
         <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="index.html" class="navbar-link" data-nav-link>HOME</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="recipes.html" class="navbar-link" data-nav-link>RECEPIES</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="calorie.html" class="navbar-link" data-nav-link>CALORIE AND NUTRITION</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="workout.html" class="navbar-link" data-nav-link>WORKOUT</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="mindfulness.html" class="navbar-link" data-nav-link>MINDFULNESS</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="contact.html" class="navbar-link" data-nav-link>CONTACT</a>
-          </li>
-
+          <li class="navbar-item"><a href="index.html" class="navbar-link" data-nav-link>HOME</a></li>
+          <li class="navbar-item"><a href="recipes.html" class="navbar-link" data-nav-link>RECEPIES</a></li>
+          <li class="navbar-item"><a href="calorie.html" class="navbar-link" data-nav-link>CALORIE AND NUTRITION</a></li>
+          <li class="navbar-item"><a href="workout.html" class="navbar-link" data-nav-link>WORKOUT</a></li>
+          <li class="navbar-item"><a href="mindfulness.html" class="navbar-link" data-nav-link>MINDFULNESS</a></li>
+          <li class="navbar-item"><a href="contact.html" class="navbar-link" data-nav-link>CONTACT</a></li>
         </ul>
-
       </nav>
 
-      <!-- Open button (mobile nav) -->
       <button class="nav-toggle-btn" aria-label="open manu" data-nav-toggler>
         <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
       </button>
 
-      <!-- Overlay (mobile nav background) -->
       <div class="overlay" data-nav-toggler data-overlay></div>
-
     </div>
   </header>
 
-  <!-- ========================================
-       MAIN CONTENT
-       ======================================== -->
-  <!-- ===== MAIN ===== -->
+  <!-- ========== MAIN ========== -->
   <main>
     <article>
 
-      <!-- Recipes section -->
+      <!-- Hidden page-level heading for accessibility -->
+      <h1 class="visually-hidden">Recipes</h1>
+
       <section class="section tip" id="recipes">
         <div class="container">
 
-          <!-- Section header -->
           <div class="title-wrapper">
             <p class="section-subtitle">Our Recipes</p>
-            <h2 class="h2 section-title">Healthy & Delicious</h2>
+            <h2 class="h2 section-title">Healthy &amp; Delicious</h2>
           </div>
 
           <!-- Filter and Search controls -->
-          <div class="filter-bar">
-            <select id="categoryFilter">
+          <div class="filter-bar" role="search">
+            <label for="categoryFilter" class="visually-hidden">Filter by category</label>
+            <select id="categoryFilter" name="category">
               <option value="all">All Categories</option>
               <option value="Breakfast">Breakfast</option>
               <option value="Lunch">Lunch</option>
               <option value="Dinner">Dinner</option>
               <option value="Snacks">Snacks</option>
             </select>
-            <input type="text" id="searchInput" placeholder="Search by name...">
+
+            <label for="searchInput" class="visually-hidden">Search by recipe name</label>
+            <input type="text" id="searchInput" name="q" placeholder="Search by name...">
           </div>
 
-          <!-- Container for dynamically loaded recipe cards -->
+          <!-- Cards injected by JS -->
           <div class="grid-list" id="recipeContainer"></div>
 
         </div>
@@ -138,30 +96,20 @@
     </article>
   </main>
 
-  <!-- ========================================
-       RECIPE MODAL
-       ======================================== -->
-  <!-- ===== MODAL ===== -->
-  <div class="modal" id="recipeModal">
+  <!-- ========== MODAL ========== -->
+  <div class="modal" id="recipeModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
     <div class="modal-content">
-      <!-- Close button -->
-      <span class="close-btn" id="closeModal">&times;</span>
+      <span class="close-btn" id="closeModal" aria-label="Close">&times;</span>
 
-      <!-- Modal title -->
-      <h2 id="modalTitle"></h2>
-      
-      <!-- Modal description -->
+      <h2 id="modalTitle">Recipe details</h2>
       <p id="modalDescription"></p>
 
-      <!-- Ingredients list -->
       <h3>Ingredients</h3>
       <ul id="modalIngredients"></ul>
 
-      <!-- Steps list -->
       <h3>Steps</h3>
       <ol id="modalSteps"></ol>
 
-      <!-- Nutrition table -->
       <h3>Nutrition Info</h3>
       <table id="modalNutrition" border="1">
         <thead>
@@ -172,34 +120,29 @@
     </div>
   </div>
 
-  <!-- ========================================
-       FOOTER
-       ======================================== -->
-  <!-- ===== FOOTER ===== -->
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="footer-top section" data-section>
       <div class="container">
 
-        <!-- Newsletter signup -->
         <div class="footer-list">
           <p class="footer-list-title">Subscribe Newsletter</p>
           <p class="footer-list-text">Subscribe to our newsletter for tips, recipes, and inspiration for healthier living</p>
           <form class="footer-form">
-            <input type="email" class="email-field" placeholder="Enter email" required>
+            <label for="newsletter-email" class="visually-hidden">Email address</label>
+            <input type="email" id="newsletter-email" class="email-field" placeholder="Enter email" required>
             <button class="btn btn-secondary" type="submit">Subscribe Now</button>
           </form>
         </div>
 
-        <!-- Help links -->
         <ul class="footer-list">
           <li><p class="footer-list-title">Help Links</p></li>
           <li><a href="#" class="footer-link">Privacy Policy</a></li>
-          <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="#" class="footer-link">Terms &amp; Conditions</a></li>
           <li><a href="#" class="footer-link">Customer Support</a></li>
           <li><a href="#" class="footer-link">Course FAQ’s</a></li>
         </ul>
 
-        <!-- Resources links -->
         <ul class="footer-list">
           <li><p class="footer-list-title">Resources</p></li>
           <li><a href="#" class="footer-link">Blog articles</a></li>
@@ -208,7 +151,6 @@
           <li><a href="#" class="footer-link">Mindfulness tips</a></li>
         </ul>
 
-        <!-- Contact details -->
         <ul class="footer-list">
           <li><p class="footer-list-title">Contact us</p></li>
           <li><a href="#" class="footer-link"><ion-icon name="location-sharp" class="footer-icon"></ion-icon>209/38, Danagama Rd, Mawanella</a></li>
@@ -218,7 +160,6 @@
       </div>
     </div>
 
-    <!-- Footer bottom bar -->
     <div class="footer-bottom">
       <div class="container">
         <p class="copyright">
@@ -234,23 +175,13 @@
     </div>
   </footer>
 
-  <!-- ========================================
-       BACK TO TOP BUTTON
-       ======================================== -->
-  <!-- 
-    - #BACK TO TOP
-  -->
+  <!-- Back to top -->
   <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
     <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
   </a>
 
-  <!-- ========================================
-       SCRIPTS
-       ======================================== -->
-  <!-- Main JS -->
+  <!-- Scripts -->
   <script src="./assets/js/script.js" defer></script>
-
-  <!-- Recipes JS -->
   <script src="./assets/js/recipes.js" defer></script>
 </body>
 </html>
