@@ -123,19 +123,19 @@
           <!-- Contact form -->
           <form id="contactForm" class="contact-form" novalidate>
             <div class="form-row">
-              <label for="name" class="form-label">Name <span aria-hidden="true" style="color: var(--orange-web);">*</span></label>
+              <label for="name" class="form-label">Name <span class="required" aria-hidden="true">*</span></label>
               <input id="name" name="name" type="text" class="form-input" placeholder="Your full name" autocomplete="name" required>
               <small class="error-text" id="nameError" aria-live="polite"></small>
             </div>
 
             <div class="form-row">
-              <label for="email" class="form-label">Email <span aria-hidden="true" style="color: var(--orange-web);">*</span></label>
+              <label for="email" class="form-label">Email <span class="required" aria-hidden="true">*</span></label>
               <input id="email" name="email" type="email" class="form-input" placeholder="you@example.com" autocomplete="email" required>
               <small class="error-text" id="emailError" aria-live="polite"></small>
             </div>
 
             <div class="form-row">
-              <label for="message" class="form-label">Message <span aria-hidden="true" style="color: var(--orange-web);">*</span></label>
+              <label for="message" class="form-label">Message <span class="required" aria-hidden="true">*</span></label>
               <textarea id="message" name="message" rows="6" class="form-input" placeholder="How can we help?" required></textarea>
               <small class="error-text" id="messageError" aria-live="polite"></small>
             </div>
@@ -236,8 +236,9 @@
         <div class="footer-list">
           <p class="footer-list-title">Subscribe Newsletter</p>
           <p class="footer-list-text">Subscribe to our newsletter for tips, recipes, and inspiration for healthier living</p>
-          <form class="footer-form" id="newsletterForm">
-            <input type="email" class="email-field" placeholder="Enter email" required>
+           <form class="footer-form">
+            <label for="newsletter-email" class="visually-hidden">Email address</label>
+            <input type="email" id="newsletter-email" class="email-field" placeholder="Enter email" required>
             <button class="btn btn-secondary" type="submit">Subscribe Now</button>
           </form>
         </div>
