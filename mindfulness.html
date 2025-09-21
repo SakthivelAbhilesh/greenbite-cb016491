@@ -94,12 +94,13 @@
 
           <!-- Sound toggle -->
           <div class="sound-toggle">
-            <label class="switch">
-              <input type="checkbox" id="soundToggleSwitch">
-              <span class="slider round"></span>
-            </label>
-            <span class="toggle-label">Ambient Sounds</span>
-          </div>
+  <label for="soundToggleSwitch" class="switch">
+    <input type="checkbox" id="soundToggleSwitch">
+    <span class="slider round" aria-hidden="true"></span>
+    <span class="visually-hidden">Ambient sounds</span>
+  </label>
+  <span class="toggle-label">Ambient Sounds</span>
+</div>
 
           <!-- Timer & Sessions -->
           <div class="timer-row">
@@ -132,7 +133,8 @@
           <p class="footer-list-title">Subscribe Newsletter</p>
           <p class="footer-list-text">Subscribe to our newsletter for tips, recipes, and inspiration for healthier living</p>
           <form class="footer-form">
-            <input type="email" class="email-field" placeholder="Enter email" required>
+            <label for="newsletter-email" class="visually-hidden">Email address</label>
+            <input type="email" id="newsletter-email" class="email-field" placeholder="Enter email" required>
             <button class="btn btn-secondary" type="submit">Subscribe Now</button>
           </form>
         </div>
