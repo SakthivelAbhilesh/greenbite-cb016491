@@ -405,8 +405,15 @@ body { background-color: var(--white); color: var(--davys-gray); font-size: 1.6r
   z-index: 1;
 }
 
-.app .section-subtitle { font-size: var(--fs-6); }
-.app .section-title { color: var(--white); margin-block-end: 40px; }
+.app .section-subtitle {
+  font-size: var(--fs-6);
+  color: var(--black-chocolate); /* improved contrast on orange */
+}
+
+.app .section-title {
+  color: var(--black-chocolate); /* improved contrast on orange */
+  margin-block-end: 40px;
+}
 
 .app .wrapper { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; }
 
@@ -466,8 +473,17 @@ body { background-color: var(--white); color: var(--davys-gray); font-size: 1.6r
 }
 .footer-top .email-field::placeholder { color: inherit; }
 
-.footer-top .btn-secondary { border-radius: var(--radius-10); }
-.footer-top .btn-secondary:is(:hover, :focus) { background-color: var(--white); color: var(--onyx); }
+.footer-top .btn-secondary {
+  border-radius: var(--radius-10);
+  background-color: var(--orange-web); /* give it strong base color */
+  color: var(--black-chocolate);       /* darker text for contrast */
+}
+
+.footer-top .btn-secondary:is(:hover, :focus) {
+  background-color: var(--white);
+  color: var(--onyx);
+}
+
 
 .footer-link, .address { font-size: var(--fs-6); margin-block-start: 12px; transition: var(--transition-1); }
 .address-title { margin-block: 12px; }
@@ -492,6 +508,11 @@ body { background-color: var(--white); color: var(--davys-gray); font-size: 1.6r
 .footer-bottom-item { position: relative; display: flex; align-items: center; }
 .footer-bottom-item:not(:last-child)::after { content: "-"; margin-inline: 10px; }
 .footer-bottom-link { transition: var(--transition-1); }
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
 
 
 /* ========== Back To Top ========== */
@@ -1053,6 +1074,13 @@ input:checked + .slider:before { transform: translateX(22px); }
 
 .form-feedback { margin-top: 12px; font-weight: var(--fw-600); color: var(--blue-green-color-wheel); }
 
+/* Required asterisk: darker for contrast */
+.form-label .required {
+  color: hsl(38, 100%, 32%); /* darker orange (~#a86400), ≥4.5:1 on white */
+  font-weight: 700;
+}
+
+
 /* Map card */
 .map-card { background: var(--white); padding: 18px; border-radius: var(--radius-10); box-shadow: var(--shadow-1); }
 .map-address { margin-bottom: 10px; color: var(--davys-gray); }
@@ -1097,6 +1125,7 @@ input:checked + .slider:before { transform: translateX(22px); }
 }
 .faq-item.active .faq-answer { max-height: 200px; padding: 14px 16px; }
 
+
 /* Health tip compact card */
 #health-tip-card {
   min-height: auto; max-width: 400px; margin-inline: auto;
@@ -1108,3 +1137,4 @@ input:checked + .slider:before { transform: translateX(22px); }
 #health-tip-card .wrapper { display: flex; justify-content: center; margin-bottom: 15px; }
 
 .faq-title { font-size: 2.5rem; font-weight: var(--fw-600); margin-bottom: 10px; }
+
