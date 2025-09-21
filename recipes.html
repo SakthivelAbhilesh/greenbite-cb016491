@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite - Recipes</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Ionicons (module and nomodule for compatibility) -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- ========================================
+       HEADER
+       ======================================== -->
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <!-- Logo -->
+      <a href="#" class="logo">
+        GreenBite<span class="span">.</span>
+      </a>
+
+      <!-- Navbar -->
+      <nav class="navbar" data-navbar>
+
+        <!-- Close button (mobile nav) -->
+        <button class="nav-toggle-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <!-- Nav links -->
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>HOME</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="recipes.html" class="navbar-link" data-nav-link>RECEPIES</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="calorie.html" class="navbar-link" data-nav-link>CALORIE AND NUTRITION</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="workout.html" class="navbar-link" data-nav-link>WORKOUT</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="mindfulness.html" class="navbar-link" data-nav-link>MINDFULNESS</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link" data-nav-link>CONTACT</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <!-- Open button (mobile nav) -->
+      <button class="nav-toggle-btn" aria-label="open manu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <!-- Overlay (mobile nav background) -->
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <!-- ========================================
+       MAIN CONTENT
+       ======================================== -->
+  <!-- ===== MAIN ===== -->
+  <main>
+    <article>
+
+      <!-- Recipes section -->
+      <section class="section tip" id="recipes">
+        <div class="container">
+
+          <!-- Section header -->
+          <div class="title-wrapper">
+            <p class="section-subtitle">Our Recipes</p>
+            <h2 class="h2 section-title">Healthy & Delicious</h2>
+          </div>
+
+          <!-- Filter and Search controls -->
+          <div class="filter-bar">
+            <select id="categoryFilter">
+              <option value="all">All Categories</option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Lunch">Lunch</option>
+              <option value="Dinner">Dinner</option>
+              <option value="Snacks">Snacks</option>
+            </select>
+            <input type="text" id="searchInput" placeholder="Search by name...">
+          </div>
+
+          <!-- Container for dynamically loaded recipe cards -->
+          <div class="grid-list" id="recipeContainer"></div>
+
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- ========================================
+       RECIPE MODAL
+       ======================================== -->
+  <!-- ===== MODAL ===== -->
+  <div class="modal" id="recipeModal">
+    <div class="modal-content">
+      <!-- Close button -->
+      <span class="close-btn" id="closeModal">&times;</span>
+
+      <!-- Modal title -->
+      <h2 id="modalTitle"></h2>
+      
+      <!-- Modal description -->
+      <p id="modalDescription"></p>
+
+      <!-- Ingredients list -->
+      <h3>Ingredients</h3>
+      <ul id="modalIngredients"></ul>
+
+      <!-- Steps list -->
+      <h3>Steps</h3>
+      <ol id="modalSteps"></ol>
+
+      <!-- Nutrition table -->
+      <h3>Nutrition Info</h3>
+      <table id="modalNutrition" border="1">
+        <thead>
+          <tr><th>Nutrient</th><th>Amount</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top section" data-section>
+      <div class="container">
+
+        <!-- Newsletter signup -->
+        <div class="footer-list">
+          <p class="footer-list-title">Subscribe Newsletter</p>
+          <p class="footer-list-text">Subscribe to our newsletter for tips, recipes, and inspiration for healthier living</p>
+          <form class="footer-form">
+            <input type="email" class="email-field" placeholder="Enter email" required>
+            <button class="btn btn-secondary" type="submit">Subscribe Now</button>
+          </form>
+        </div>
+
+        <!-- Help links -->
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Help Links</p></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="#" class="footer-link">Customer Support</a></li>
+          <li><a href="#" class="footer-link">Course FAQ’s</a></li>
+        </ul>
+
+        <!-- Resources links -->
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Resources</p></li>
+          <li><a href="#" class="footer-link">Blog articles</a></li>
+          <li><a href="#" class="footer-link">Healthy recipes</a></li>
+          <li><a href="#" class="footer-link">Workout guides</a></li>
+          <li><a href="#" class="footer-link">Mindfulness tips</a></li>
+        </ul>
+
+        <!-- Contact details -->
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Contact us</p></li>
+          <li><a href="#" class="footer-link"><ion-icon name="location-sharp" class="footer-icon"></ion-icon>209/38, Danagama Rd, Mawanella</a></li>
+          <li><a href="tel:0771507991" class="footer-link"><ion-icon name="call-sharp" class="footer-icon"></ion-icon>0771507991</a></li>
+          <li><a href="mailto:sakthivelabhilesh@gmail.com" class="footer-link"><ion-icon name="mail-sharp" class="footer-icon"></ion-icon>sakthivelabhilesh@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer bottom bar -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2025 GreenBite Made by <a href="#" class="copyright-link">Abhilesh</a>
+        </p>
+        <ul class="footer-bottom-list">
+          <li class="footer-bottom-item"><a class="footer-bottom-link" href="#">Terms of Service</a></li>
+          <li class="footer-bottom-item"><a class="footer-bottom-link" href="#">Privacy Policy</a></li>
+          <li class="footer-bottom-item"><a class="footer-bottom-link" href="#">Sitemap</a></li>
+          <li class="footer-bottom-item"><a class="footer-bottom-link" href="#">Security</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================
+       BACK TO TOP BUTTON
+       ======================================== -->
+  <!-- 
+    - #BACK TO TOP
+  -->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- ========================================
+       SCRIPTS
+       ======================================== -->
+  <!-- Main JS -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- Recipes JS -->
+  <script src="./assets/js/recipes.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite - Recipes</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Ionicons (module/nomodule) -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- ========================================
+       HEADER
+       ======================================== -->
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <!-- Logo -->
+      <a href="#" class="logo">
+        
+        GreenBite<span class="span">.</span>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="navbar" data-navbar>
+
+        <!-- Close (mobile) -->
+        <button class="nav-toggle-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <!-- Nav links -->
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>HOME</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="recipes.html" class="navbar-link" data-nav-link>RECEPIES</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="calorie.html" class="navbar-link" data-nav-link>CALORIE AND NUTRITION</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="workout.html" class="navbar-link" data-nav-link>WORKOUT</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="mindfulness.html" class="navbar-link" data-nav-link>MINDFULNESS</a>
+          </li>
+
+           <li class="navbar-item">
+            <a href="contact.html" class="navbar-link" data-nav-link>CONTACT</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      
+      <!-- Open (mobile) -->
+      <button class="nav-toggle-btn" aria-label="open manu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <!-- Overlay (mobile nav) -->
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+  <!-- ========================================
+       MAIN CONTENT
+       ======================================== -->
+  <!-- ===== MAIN ===== -->
+  <main>
+    <section class="section contact" aria-label="Contact" id="contact" data-section>
+      <div class="container">
+
+        <!-- Section header -->
+        <div class="title-wrapper">
+          <p class="section-subtitle">We’d love to hear from you</p>
+          <h2 class="h2 section-title">Contact GreenBite</h2>
+        </div>
+
+        <!-- Two-column layout: form + map -->
+        <div class="contact-grid">
+          <!-- Contact form -->
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-row">
+              <label for="name" class="form-label">Name <span aria-hidden="true" style="color: var(--orange-web);">*</span></label>
+              <input id="name" name="name" type="text" class="form-input" placeholder="Your full name" autocomplete="name" required>
+              <small class="error-text" id="nameError" aria-live="polite"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="email" class="form-label">Email <span aria-hidden="true" style="color: var(--orange-web);">*</span></label>
+              <input id="email" name="email" type="email" class="form-input" placeholder="you@example.com" autocomplete="email" required>
+              <small class="error-text" id="emailError" aria-live="polite"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="message" class="form-label">Message <span aria-hidden="true" style="color: var(--orange-web);">*</span></label>
+              <textarea id="message" name="message" rows="6" class="form-input" placeholder="How can we help?" required></textarea>
+              <small class="error-text" id="messageError" aria-live="polite"></small>
+            </div>
+
+            <!-- Submit -->
+            <button class="btn btn-primary" type="submit">
+              Send Message
+            </button>
+
+            <!-- Live feedback -->
+            <p id="formFeedback" class="form-feedback" aria-live="polite" role="status"></p>
+          </form>
+
+          <!-- Map card with address and quick contacts -->
+          <div class="map-card">
+            <label class="cal-label">GreenBite HQ</label>
+            <p class="map-address">209/38, Danagama Rd, Mawanella</p>
+            <iframe
+              class="map"
+              title="Map to GreenBite HQ"
+              src="https://www.google.com/maps?q=Danagama%20Rd%2C%20Mawanella&output=embed"
+              width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div class="map-contacts">
+              <a href="tel:0771507991" class="contact-chip">
+                <ion-icon name="call-outline" aria-hidden="true"></ion-icon> 0771507991
+              </a>
+              <a href="mailto:sakthivelabhilesh@gmail.com" class="contact-chip">
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon> sakthivelabhilesh@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="title-wrapper faq-title-wrapper" style="padding-top: 20px;">
+          <p class="section-subtitle">FAQ</p>
+          
+         <h2 class="h2 section-title faq-title">Frequently Asked Questions</h2>
+
+        </div>
+
+        <!-- Accordion-style FAQ list -->
+        <ul class="faq-list" id="faqList">
+          <li class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How soon do you reply to messages?
+              <ion-icon class="faq-icon" name="chevron-down-outline" aria-hidden="true"></ion-icon>
+            </button>
+            <div class="faq-answer" role="region">
+              We typically respond within 24–48 hours, Monday to Friday.
+            </div>
+          </li>
+
+          <li class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do you offer personalized meal plans?
+              <ion-icon class="faq-icon" name="chevron-down-outline" aria-hidden="true"></ion-icon>
+            </button>
+            <div class="faq-answer" role="region">
+              Yes! Tell us your goals and dietary preferences in your message and we’ll follow up with options.
+            </div>
+          </li>
+          <li class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can I request a new recipe?
+              <ion-icon class="faq-icon" name="chevron-down-outline" aria-hidden="true"></ion-icon>
+            </button>
+            <div class="faq-answer" role="region">
+              Absolutely! Share the cuisine, dietary needs (e.g., vegetarian, gluten-free), and any ingredients you’d like featured.
+            </div>
+          </li>
+
+          <li class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How do I report a bug or issue on the site?
+              <ion-icon class="faq-icon" name="chevron-down-outline" aria-hidden="true"></ion-icon>
+            </button>
+            <div class="faq-answer" role="region">
+              Use the contact form and include steps to reproduce the issue and your device/browser.
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top section" data-section>
+      <div class="container">
+        <!-- Newsletter -->
+        <div class="footer-list">
+          <p class="footer-list-title">Subscribe Newsletter</p>
+          <p class="footer-list-text">Subscribe to our newsletter for tips, recipes, and inspiration for healthier living</p>
+          <form class="footer-form" id="newsletterForm">
+            <input type="email" class="email-field" placeholder="Enter email" required>
+            <button class="btn btn-secondary" type="submit">Subscribe Now</button>
+          </form>
+        </div>
+
+        <!-- Help links -->
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Help Links</p></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="#" class="footer-link">Customer Support</a></li>
+          <li><a href="#" class="footer-link">Course FAQ’s</a></li>
+        </ul>
+
+        <!-- Resources -->
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Resources</p></li>
+          <li><a href="#" class="footer-link">Blog articles</a></li>
+          <li><a href="#" class="footer-link">Healthy recipes</a></li>
+          <li><a href="#" class="footer-link">Workout guides</a></li>
+          <li><a href="#" class="footer-link">Mindfulness tips</a></li>
+        </ul>
+
+        <!-- Contact -->
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Contact us</p></li>
+          <li><a href="#" class="footer-link"><ion-icon name="location-sharp" class="footer-icon"></ion-icon>209/38, Danagama Rd, Mawanella</a></li>
+          <li><a href="tel:0771507991" class="footer-link"><ion-icon name="call-sharp" class="footer-icon"></ion-icon>0771507991</a></li>
+          <li><a href="mailto:sakthivelabhilesh@gmail.com" class="footer-link"><ion-icon name="mail-sharp" class="footer-icon"></ion-icon>sakthivelabhilesh@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2025 GreenBite Made by
+          <a href="#" class="copyright-link">Abhilesh</a>
+        </p>
+        <ul class="footer-bottom-list">
+          <li class="footer-bottom-item"><a href="#" class="footer-bottom-link">Terms of Service</a></li>
+          <li class="footer-bottom-item"><a href="#" class="footer-bottom-link">Privacy Policy</a></li>
+          <li class="footer-bottom-item"><a href="#" class="footer-bottom-link">Sitemap</a></li>
+          <li class="footer-bottom-item"><a href="#" class="footer-bottom-link">Security</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================
+       BACK TO TOP BUTTON
+       ======================================== -->
+  <!-- Back to top -->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- ========================================
+       SCRIPTS
+       ======================================== -->
+  <!-- Scripts -->
+  <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/contact.js" defer></script>
+</body>
+</html>

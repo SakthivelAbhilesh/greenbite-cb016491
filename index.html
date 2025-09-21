@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite - Fitness & Nutrition</title>
+
+  <!-- Ionicons (module & legacy) -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule sr c="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  
+  <!-- Favicon -->
+  <!-- Note: uses SVG for scalability -->
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Site CSS -->
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Fonts (Montserrat, Playfair Display) -->
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- ========================================
+       HEADER
+       ======================================== -->
+  <!-- Fixed header with brand and responsive nav -->
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <!-- Brand -->
+      <a href="#" class="logo">
+        
+        GreenBite<span class="span">.</span>
+      </a>
+
+      <!-- Primary Navigation -->
+      <nav class="navbar" data-navbar>
+
+        <!-- Close nav (mobile) -->
+        <button class="nav-toggle-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <!-- Nav links -->
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>HOME</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="recipes.html" class="navbar-link" data-nav-link>RECEPIES</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="calorie.html" class="navbar-link" data-nav-link>CALORIE AND NUTRITION</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="workout.html" class="navbar-link" data-nav-link>WORKOUT</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="mindfulness.html" class="navbar-link" data-nav-link>MINDFULNESS</a>
+          </li>
+
+           <li class="navbar-item">
+            <a href="contact.html" class="navbar-link" data-nav-link>CONTACT</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <!-- Open nav (mobile) -->
+      <button class="nav-toggle-btn" aria-label="open manu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <!-- Overlay for mobile nav -->
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+  <!-- /HEADER -->
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- ========================================
+           HERO
+           ======================================== -->
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" aria-label="hero" id="home" data-section
+        style="background-image: url('./assets/images/hero-banner.jpg')">
+        <div class="container">
+
+          <!-- Tagline -->
+          <p class="hero-subtitle">Fitness & Nutrition</p>
+
+          <!-- Rotating/ARIA-live quote -->
+          <h1 class="h1 hero-title">
+            <span id="hero-quote"class="hero-quote" aria-live="polite" role="status">Eat healthy, live healthy.</span>
+          </h1>
+         
+          <!-- Social links -->
+          <div class="social-wrapper" >
+
+            <p class="social-title">Connect with us:</p>
+
+            <ul class="social-list">
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-skype"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+      <!-- /HERO -->
+
+
+      <!-- ========================================
+           ABOUT
+           ======================================== -->
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" aria-label="about" id="about" data-section>
+        <div class="container">
+
+          <!-- Image -->
+          <div class="about-banner img-holder" style="--width: 470; --height: 580;">
+            <img src="./assets/images/about-banner.jpg" width="470" height="580" loading="lazy" alt="about banner"
+              class="img-cover">
+
+    
+          </div>
+
+          <!-- Copy -->
+          <div class="about-content">
+
+       
+
+
+            <h2 class="h2 section-title">ABOUT US</h2>
+
+            <p class="section-text">
+              GreenBite is a wellness brand committed to helping you live a healthier, more balanced life. Through nutritious meals, regular exercise, and mindful practices, we empower you to nurture your body and mind every day. Our goal is to make wellness accessible, enjoyable, and sustainable for everyone
+            </p>
+
+          </div>
+
+        </div>
+      </section>
+      <!-- /ABOUT -->
+
+    <!-- ========================================
+         HEALTH TIP OF THE DAY
+         ======================================== -->
+    <!-- 
+  - #HEALTH TIP OF THE DAY
+-->
+
+<section class="section tip" aria-label="health tips" id="health-tips" data-section>
+  <div class="container">
+
+    <!-- Section header -->
+    <div class="title-wrapper">
+      <p class="section-subtitle">Health Tip of the Day</p>
+      <h2 class="h2 section-title">Stay Healthy & Energized</h2>
+    </div>
+
+    <!-- Tip card populated by JS -->
+    <div class="tip-card" id="health-tip-card">
+      <div class="wrapper">
+        <time class="publish-date" id="health-tip-date"></time>
+      </div>
+
+      <h3 class="h3">
+        <span class="card-title" id="health-tip-title"></span>
+      </h3>
+
+      <p class="card-text" id="health-tip-text"></p>
+    </div>
+
+  </div>
+</section>
+<!-- /HEALTH TIP -->
+
+
+      <!-- ========================================
+           APP PROMO
+           ======================================== -->
+      <!-- 
+        - #APP
+      -->
+
+      <section class="section app" aria-label="app" data-section>
+        <div class="container">
+
+          <!-- App promotion card -->
+          <div class="app-card">
+
+            <p class="section-subtitle">Mobile App Available</p>
+
+            <h2 class="h2 section-title">
+              Download our mobile app.<br>
+              and start your health journey today.
+            </h2>
+
+            <!-- Store badges -->
+            <div class="wrapper">
+              <a href="#" class="app-link" aria-label="play store">
+                <img src="./assets/images/play-store.jpg" width="134" height="38" loading="lazy" alt="Play Store"
+                  class="img">
+              </a>
+
+              <a href="#" class="app-link" aria-label="app store">
+                <img src="./assets/images/app-store.jpg" width="132" height="38" loading="lazy" alt="App Store"
+                  class="img">
+              </a>
+            </div>
+
+          </div> 
+
+        </div>
+      </section>
+      <!-- /APP PROMO -->
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top section" data-section>
+      <div class="container">
+
+        <!-- Newsletter subscribe -->
+        <div class="footer-list">
+          <p class="footer-list-title">Subscribe Newsletter</p>
+          <p class="footer-list-text">Subscribe to our newsletter for tips, recipes, and inspiration for healthier living</p>
+          <form class="footer-form">
+            <input type="email" class="email-field" placeholder="Enter email" required>
+            <button class="btn btn-secondary" type="submit">Subscribe Now</button>
+          </form>
+        </div>
+
+        <!-- Help links -->
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Help Links</p></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="#" class="footer-link">Customer Support</a></li>
+          <li><a href="#" class="footer-link">Course FAQ’s</a></li>
+        </ul>
+
+        <!-- Resource links -->
+         <ul class="footer-list">
+          <li><p class="footer-list-title">Resources</p></li>
+          <li><a href="#" class="footer-link">Blog articles</a></li>
+          <li><a href="#" class="footer-link">Healthy recipes</a></li>
+          <li><a href="#" class="footer-link">Workout guides</a></li>
+          <li><a href="#" class="footer-link">Mindfulness tips</a></li>
+        </ul>
+
+        <!-- Contact details -->
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Contact us</p></li>
+          <li><a href="#" class="footer-link"><ion-icon name="location-sharp" class="footer-icon"></ion-icon>209/38, Danagama Rd, Mawanella</a></li>
+          <li><a href="tel:0771507991" class="footer-link"><ion-icon name="call-sharp" class="footer-icon"></ion-icon>0771507991</a></li>
+          <li><a href="mailto:sakthivelabhilesh@gmail.com" class="footer-link"><ion-icon name="mail-sharp" class="footer-icon"></ion-icon>sakthivelabhilesh@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer bottom bar -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2025 GreenBite Made by <a href="#" class="copyright-link">Abhilesh</a>
+        </p>
+        <ul class="footer-bottom-list">
+          <li class="footer-bottom-item"><a class="footer-bottom-link" href="#">Terms of Service</a></li>
+          <li class="footer-bottom-item"><a class="footer-bottom-link" href="#">Privacy Policy</a></li>
+          <li class="footer-bottom-item"><a class="footer-bottom-link" href="#">Sitemap</a></li>
+          <li class="footer-bottom-item"><a class="footer-bottom-link" href="#">Security</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- /FOOTER -->
+
+
+
+  <!-- ========================================
+       BACK TO TOP BUTTON
+       ======================================== -->
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- ========================================
+       SCRIPTS
+       ======================================== -->
+  <!-- App JS (deferred) -->
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- Ionicons (module & legacy) -->
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenBite - Mindfulness</title>
+
+  <!-- Global site styles -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Page styles -->
+  <link rel="stylesheet" href="./assets/css/mindfulness.css">
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- using the same fonts as other pages -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body id="top" class="mindfulness-page"> 
+  <!-- ===== HEADER ===== -->
+  <header class="header" data-header>
+    <div class="container">
+      <a href="#" class="logo">GreenBite<span class="span">.</span></a>
+      <nav class="navbar" data-navbar>
+        <button class="nav-toggle-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="index.html" class="navbar-link" data-nav-link>HOME</a></li>
+          <li class="navbar-item"><a href="recipes.html" class="navbar-link" data-nav-link>RECEPIES</a></li>
+          <li class="navbar-item"><a href="calorie.html" class="navbar-link" data-nav-link>CALORIE AND NUTRITION</a></li>
+          <li class="navbar-item"><a href="workout.html" class="navbar-link" data-nav-link>WORKOUT</a></li>
+          <li class="navbar-item"><a href="mindfulness.html" class="navbar-link" data-nav-link>MINDFULNESS</a></li>
+          <li class="navbar-item"><a href="contact.html" class="navbar-link" data-nav-link>CONTACT</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle-btn" aria-label="open manu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    <section class="section mindfulness" aria-label="Mindfulness" id="mindfulness" data-section>
+      <!-- background video -->
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="./assets/video/meditation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="container">
+        <div class="title-wrapper">
+          <p class="section-subtitle">Find Your Calm</p>
+          <h2 class="h2 section-title ">Mindfulness & Focus</h2>
+        </div>
+
+        <!-- Mode toggle -->
+        <div class="mode-toggle">
+          <button class="mode-btn active" id="meditationMode" type="button">Meditation</button>
+          <button class="mode-btn" id="pomodoroMode" type="button">Pomodoro</button>
+        </div>
+
+        <!-- Glass card -->
+        <div class="mind-card">
+          <!-- Breathing circle -->
+          <div class="breathing-circle" id="breathingCircle" role="button" aria-label="Breathing circle">
+            <div class="circle-core">
+              <span id="instruction">Click Start</span>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="controls">
+            <button class="btn btn-primary" id="playBtn" type="button">Start</button>
+            <button class="btn btn-secondary" id="resetBtn" type="button">Reset</button>
+          </div>
+
+          <!-- Ambient sounds -->
+          <div class="sound-controls" aria-label="Ambient sounds">
+            <button class="sound-btn" data-sound="rain" type="button">Rain</button>
+            <button class="sound-btn" data-sound="ocean" type="button">Ocean</button>
+            <button class="sound-btn" data-sound="forest" type="button">Forest</button>
+            <button class="sound-btn" data-sound="night" type="button">Night</button>
+          </div>
+
+          <!-- Sound toggle -->
+          <div class="sound-toggle">
+            <label class="switch">
+              <input type="checkbox" id="soundToggleSwitch">
+              <span class="slider round"></span>
+            </label>
+            <span class="toggle-label">Ambient Sounds</span>
+          </div>
+
+          <!-- Timer & Sessions -->
+          <div class="timer-row">
+            <div class="timer">
+              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+              <span id="timer">00:00</span>
+            </div>
+            <div class="sessions">
+              Sessions Completed: <strong id="sessionsCount">0</strong>
+            </div>
+          </div>
+
+          <!-- Session hints (white, larger; show one based on mode) -->
+          <p class="session-note" id="medNote" style="margin-top:12px;text-align:center;font-size:1.6rem;font-weight:600;color:#fff;">
+            1 Meditation Session = 60 seconds
+          </p>
+          <p class="session-note" id="pomoNote" style="margin-top:8px;text-align:center;font-size:1.6rem;font-weight:600;color:#fff;" hidden>
+            1 Pomodoro Session = 25 min focus + 5 min break
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top section" data-section>
+      <div class="container">
+        <div class="footer-list">
+          <p class="footer-list-title">Subscribe Newsletter</p>
+          <p class="footer-list-text">Subscribe to our newsletter for tips, recipes, and inspiration for healthier living</p>
+          <form class="footer-form">
+            <input type="email" class="email-field" placeholder="Enter email" required>
+            <button class="btn btn-secondary" type="submit">Subscribe Now</button>
+          </form>
+        </div>
+
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Help Links</p></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="#" class="footer-link">Customer Support</a></li>
+          <li><a href="#" class="footer-link">Course FAQ’s</a></li>
+        </ul>
+
+         <ul class="footer-list">
+          <li><p class="footer-list-title">Resources</p></li>
+          <li><a href="#" class="footer-link">Blog articles</a></li>
+          <li><a href="#" class="footer-link">Healthy recipes</a></li>
+          <li><a href="#" class="footer-link">Workout guides</a></li>
+          <li><a href="#" class="footer-link">Mindfulness tips</a></li>
+        </ul>
+
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Contact us</p></li>
+          <li><a href="#" class="footer-link"><ion-icon name="location-sharp" class="footer-icon"></ion-icon>209/38, Danagama Rd, Mawanella</a></li>
+          <li><a href="tel:0771507991" class="footer-link"><ion-icon name="call-sharp" class="footer-icon"></ion-icon>0771507991</a></li>
+          <li><a href="mailto:sakthivelabhilesh@gmail.com" class="footer-link"><ion-icon name="mail-sharp" class="footer-icon"></ion-icon>sakthivelabhilesh@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2025 GreenBite Made by
+          <a href="#" class="copyright-link">Abhilesh</a>
+        </p>
+        <ul class="footer-bottom-list">
+          <li class="footer-bottom-item"><a href="#" class="footer-bottom-link">Terms of Service</a></li>
+          <li class="footer-bottom-item"><a href="#" class="footer-bottom-link">Privacy Policy</a></li>
+          <li class="footer-bottom-item"><a href="#" class="footer-bottom-link">Sitemap</a></li>
+          <li class="footer-bottom-item"><a href="#" class="footer-bottom-link">Security</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- Scripts -->
+  <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/mindfulness.js" defer></script>
+</body>
+</html>
