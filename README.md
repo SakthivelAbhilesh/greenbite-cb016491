@@ -7,14 +7,14 @@
 
 ---
 
-## 📖 Project Overview  
+## Project Overview  
 GreenBite is a wellness brand that promotes healthy living through balanced meals, exercise, and mindfulness.  
 This project is a fully functional **multi-page responsive website** built using only **HTML, CSS, and JavaScript**.  
 The website demonstrates interactive features, user engagement, and good coding practices in line with the assignment requirements.  
 
 ---
 
-## 🗂️ Website Structure  
+## Website Structure  
 The project includes the following pages:  
 
 1. **Home Page**  
@@ -53,7 +53,7 @@ The project includes the following pages:
 
 ---
 
-## 🛠️ Technologies Used  
+## Technologies Used  
 - **HTML5** (semantic structure)  
 - **CSS3** (Flexbox, Grid, animations, responsive design)  
 - **JavaScript (ES6)** (DOM manipulation, timers, form validation, localStorage)  
@@ -62,7 +62,7 @@ The project includes the following pages:
 
 ---
 
-## ✅ Features Implemented  
+## Features Implemented  
 - Responsive design (desktop, tablet, mobile)  
 - Dynamic health tips & quotes  
 - Interactive recipes with modals  
@@ -74,12 +74,9 @@ The project includes the following pages:
 
 ---
 
-## 🚀 Deployment  
+## Deployment  
 The website is hosted using **GitHub Pages**.  
-👉 **Live Link:** [https://your-username.github.io/greenbite-CB016491/](https://your-username.github.io/greenbite-CB016491/)  
-
-*(replace with your actual GitHub Pages link once deployed)*  
+**Live Link:** [https://sakthivelabhilesh.github.io/greenbite-cb016491/](https://sakthivelabhilesh.github.io/greenbite-cb016491/)
 
 ---
-
-## 📂 Project Structure  
+ 
