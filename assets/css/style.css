@@ -289,13 +289,7 @@ body { background-color: var(--white); color: var(--davys-gray); font-size: 1.6r
   border-radius: 50%;
   transition: var(--transition-1);
 }
-.social-link:is(:hover, :focus) {
-  background-color: var(--blue-green-color-wheel);
-  color: var(--white);
-  /* optional: make border slightly darker to stay visible (still matches the theme) */
-  border-color: color-mix(in srgb, var(--blue-green-color-wheel) 90%, black);
-}
-
+.social-link:is(:hover, :focus) { background-color: var(--blue-green-color-wheel); border-color: var(--blue-green-color-wheel); color: var(--white); }
 
 
 /* ========== About ========== */
