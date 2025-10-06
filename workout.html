@@ -143,8 +143,9 @@
   </div>
 </div>
 
-        </div>
-      </div>
+          </div> <!-- closes .workout-card (right) -->
+        </div>   <!-- closes .workout-grid -->
+      </div>     <!-- closes .container -->
     </section>
   </main>
 
@@ -165,7 +166,8 @@
             Subscribe to our newsletter for tips, recipes, and inspiration for healthier living
           </p>
 
-          <form action="" class="footer-form">
+          <!-- FIX: action must be non-empty -->
+          <form action="#" class="footer-form">
             <input type="email" name="email_address" aria-label="email" placeholder="Enter email" required
               class="email-field">
 
@@ -253,8 +255,7 @@
       <div class="container">
 
         <p class="copyright">
-          &copy; 2025 GreenBite Made
-          <aria-hidden="true"></ion-icon> by
+          &copy; 2025 GreenBite Made by
           <a href="#" class="copyright-link">Abhilesh</a>
         </p>
 
@@ -283,10 +284,6 @@
 
   </footer>
 
-
-
-
-
   <!-- ========================================
        BACK TO TOP BUTTON
        ======================================== -->
@@ -297,9 +294,6 @@
   <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
     <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
   </a>
-
-
-
 
   <!-- ========================================
        SCRIPTS
